@@ -35,8 +35,10 @@ document.addEventListener("DOMContentLoaded", function() {
         ['images/locations/whittletoncreek.png','Whittleton Creek','II']
     ];
 
-    const index = Math.floor(Math.random() * locations.length);
+    //const index = Math.floor(Math.random() * locations.length);
+    index = 20
     document.body.style.backgroundImage = `url(${locations[index][0]})`;
+    document.body.style.backgroundColor = locations[index][4]
     document.getElementById('location_text').innerText = "This is " + locations[index][1] + ", from Hitman " + locations[index][2];
 });
 

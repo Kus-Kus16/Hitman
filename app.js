@@ -11,35 +11,34 @@
 // Random image
 document.addEventListener("DOMContentLoaded", function() {
     const locations = [
-        ['images/locations/ambroseisland.png','Ambrose Island','III'],
-        ['images/locations/bangkok.png','Bangkok','I'],
-        ['images/locations/berlin.png','Berlin','III'],
-        ['images/locations/carpathianmountains.png','Carpathian Mountains','III'],
-        ['images/locations/chongquing.png','Chongquing','III'],
-        ['images/locations/colorado.png','Colorado','I'],
-        ['images/locations/dartmoor.png','Dartmoor','III'],
-        ['images/locations/dubai.png','Dubai','III'],
-        ['images/locations/havenisland.png','Haven Island','II'],
-        ['images/locations/hawkesbay.png','Hawkes Bay','II'],
-        ['images/locations/hokkaido.png','Hokkaido','I'],
-        ['images/locations/ica.png','ICA Facility','I'],
-        ['images/locations/isleofsgail.png','Isle of Sgail','II'],
-        ['images/locations/marrakesh.png','Marrakesh','I'],
-        ['images/locations/mendoza.png','Mendoza','III'],
-        ['images/locations/miami.png','Miami','II'],
-        ['images/locations/mumbai.png','Mumbai','II'],
-        ['images/locations/newyork.png','New York','II'],
-        ['images/locations/paris.png','Paris','I'],
-        ['images/locations/santafortuna.png','Santa Fortuna','II'],
-        ['images/locations/sapienza.png','Sapienza','I'],
-        ['images/locations/whittletoncreek.png','Whittleton Creek','II']
+        ['images/locations/ambroseisland.png','the Ambrose Island','III','1A'],
+        ['images/locations/bangkok.png','Bangkok','I','99'],
+        ['images/locations/berlin.png','Berlin','III','80'],
+        ['images/locations/carpathianmountains.png','the Carpathian Mountains','III','4D'],
+        ['images/locations/chongquing.png','Chongquing','III','4D'],
+        ['images/locations/colorado.png','Colorado','I','73'],
+        ['images/locations/dartmoor.png','Dartmoor','III','33'],
+        ['images/locations/dubai.png','Dubai','III','80'],
+        ['images/locations/havenisland.png','the Haven Island','II','BF'],
+        ['images/locations/hawkesbay.png','Hawkes Bay','II','1A'],
+        ['images/locations/hokkaido.png','Hokkaido','I','8C'],
+        ['images/locations/ica.png','the ICA Facility','I','73'],
+        ['images/locations/isleofsgail.png','the Isle of Sgail','II','4D'],
+        ['images/locations/marrakesh.png','Marrakesh','I','4D'],
+        ['images/locations/mendoza.png','Mendoza','III','4D'],
+        ['images/locations/miami.png','Miami','II','99'],
+        ['images/locations/mumbai.png','Mumbai','II','66'],
+        ['images/locations/newyork.png','New York','II','80'],
+        ['images/locations/paris.png','Paris','I','73'],
+        ['images/locations/santafortuna.png','Santa Fortuna','II','4D'],
+        ['images/locations/sapienza.png','Sapienza','I', '73'],
+        ['images/locations/whittletoncreek.png','Whittleton Creek','II','4D']
     ];
 
-    //const index = Math.floor(Math.random() * locations.length);
-    index = 20
+    const index = Math.floor(Math.random() * locations.length);
     document.body.style.backgroundImage = `url(${locations[index][0]})`;
-    document.body.style.backgroundColor = locations[index][4]
-    document.getElementById('location_text').innerText = "This is " + locations[index][1] + ", from Hitman " + locations[index][2];
+    document.body.style.backgroundColor = '#171717' + locations[index][3] //#171717B3
+    document.getElementById('location_text').innerText = "It's " + locations[index][1] + ", from Hitman " + locations[index][2] + ".";
 });
 
 

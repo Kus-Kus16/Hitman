@@ -67,6 +67,7 @@
     border-radius: 3px;
     background: transparent;
     color: #DA0037;
+    transition: all 0.2s ease;
 }
 
 .button:hover {
@@ -299,6 +300,9 @@
         max-width: 100%;
     }
 
+    .header_image {
+        margin-top: 20px;
+    }
 }
 
 /*All main styles*/
@@ -479,6 +483,15 @@
 }
 
 @media (max-width: 800px) {
+    .gallery_container h1 {
+        font-size: 2.2rem;
+    }
+    
+    .grid_item h3 {
+        font-size: 1rem; 
+    }
+
+
     .gallery_container {
         margin: 20px;
         padding: 30px;
@@ -489,9 +502,128 @@
     }
 
     .gallery_container iframe {
+        aspect-ratio: 1 / 1;
         width: 90%;
         margin: 5px 0px;
     }
+}
+
+/*All contact styles*/
+.contact_container {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+
+    background-color: #17171799;
+    margin: 60px;
+    padding: 40px;
+}
+
+.form_container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+
+    width: 45%;
+}
+
+.form_container form {
+    width: 100%;
+}
+
+.form_container h1 {
+    font-weight: 700;
+    font-size: 2.8rem;
+    line-height: 1.3;
+
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/*TODO Remove*/
+.form_label {
+    display: none;
+    margin: 10px;
+    font-size: 1.2rem;
+}
+
+.form_input {
+    width: auto;
+    height: 50px;
+    border: none;
+    outline: none;
+    background-color: #EDEDED;
+    margin: 10px 0px;
+    padding: 0px 20px;
+    border-radius: 5px;
+}
+
+.form_input::placeholder {
+    color: gray;
+}
+
+.form_select {
+    appearance: none;
+}
+
+.form_select option{
+    color:#171717;
+}
+
+select:invalid {
+    color: gray;
+}
+
+.form_textbox {
+    height: 200px;
+    padding: 15px 20px;
+    resize: none;
+}
+
+.form_button {
+    text-decoration: none;
+    width: 40%;
+    margin: 15px 0px;
+    padding: 10px 30px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    color: #EDEDED;
+    background-color: #DA0037;
+    transition: all 0.2s ease;
+}
+
+.form_button:hover {
+    background: #EDEDED;
+    color: #DA0037;
+    transition: all 0.5s ease;
+}
+
+.contact_image {
+    align-self: flex-start;
+    max-width: 45%;
+    margin: 10px;
+}
+
+@media (max-width: 800px) {
+    .contact_container {
+        justify-content: center;
+        margin: 20px;
+    }
+
+    .form_container {
+        width: 100%;
+    }
+
+    .form_container h1 {
+        font-size: 2.6rem;
+    }
+    
+    .contact_image {
+        display: none;
+    }
+
 }
 
 
@@ -504,14 +636,3 @@ body {
 
     color: #EDEDED;
 }
-
-
-/*To skip later*/
-body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-}
-

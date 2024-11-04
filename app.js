@@ -8,7 +8,7 @@
     })
 
 
-// Random image
+// Random image, Saved name
 document.addEventListener("DOMContentLoaded", function() {
     const locations = [
         ['images/locations/ambroseisland.png','the Ambrose Island','III','1A'],
@@ -38,7 +38,23 @@ document.addEventListener("DOMContentLoaded", function() {
     const index = Math.floor(Math.random() * locations.length);
     document.body.style.backgroundImage = `url(${locations[index][0]})`;
     document.body.style.backgroundColor = '#171717' + locations[index][3] //#171717B3
-    document.getElementById('location_text').innerText = "It's " + locations[index][1] + ", from Hitman " + locations[index][2] + ".";
+    document.getElementById('location_text').textContent = "It's " + locations[index][1] + ", from Hitman " + locations[index][2] + ".";
+
+    const name = localStorage.getItem('firstname');
+    if (name != null && window.location.pathname === '/index.html') {
+        document.querySelector('.header_title').textContent = "Welcome to the World of Assassination, " + name + "!";
+    }
+
 });
 
+if (window.location.pathname === '/contact.html') {
+    document.getElementById("myForm").addEventListener("submit", function(event) {
+        // Zbieranie danych z formularza
+        const firstname = document.getElementById("firstname").value.trim();
+        const lastname = document.getElementById("lastname").value.trim();
+        const email = document.getElementById("email").value.trim();
+    
+        localStorage.setItem('firstname', firstname)
 
+    });
+}

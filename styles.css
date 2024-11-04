@@ -541,19 +541,12 @@
     margin-bottom: 10px;
 }
 
-/*TODO Remove*/
-.form_label {
-    display: none;
-    margin: 10px;
-    font-size: 1.2rem;
-}
-
 .form_input {
     width: auto;
     height: 50px;
     border: none;
     outline: none;
-    background-color: #EDEDED;
+    background-color: #ececec;
     margin: 10px 0px;
     padding: 0px 20px;
     border-radius: 5px;
@@ -595,9 +588,10 @@ select:invalid {
 }
 
 .form_button:hover {
-    background: #EDEDED;
-    color: #DA0037;
+    color: #EDEDED;
+    background-color: #a7002a;
     transition: all 0.5s ease;
+    cursor: pointer;
 }
 
 .contact_image {
@@ -628,6 +622,8 @@ select:invalid {
 
 
 body {
+    min-height: 100vh;
+
     background-color: black;
     background-blend-mode: overlay;
     background-attachment: fixed;

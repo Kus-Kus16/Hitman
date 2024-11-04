@@ -40,21 +40,23 @@ document.addEventListener("DOMContentLoaded", function() {
     document.body.style.backgroundColor = '#171717' + locations[index][3] //#171717B3
     document.getElementById('location_text').textContent = "It's " + locations[index][1] + ", from Hitman " + locations[index][2] + ".";
 
-    const name = localStorage.getItem('firstname');
-    if (name != null && window.location.pathname === '/index.html') {
+    //const name = localStorage.getItem('firstname');
+    const name = sessionStorage.getItem('firstname');
+    if (name != null) {
         document.querySelector('.header_title').textContent = "Welcome to the World of Assassination, " + name + "!";
     }
 
 });
 
-if (window.location.pathname === '/contact.html') {
-    document.getElementById("myForm").addEventListener("submit", function(event) {
-        // Zbieranie danych z formularza
-        const firstname = document.getElementById("firstname").value.trim();
-        const lastname = document.getElementById("lastname").value.trim();
-        const email = document.getElementById("email").value.trim();
-    
-        localStorage.setItem('firstname', firstname)
+// Saved name
 
+    document.getElementById("myForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+        const firstname = document.getElementById("firstname")
+    
+        sessionStorage.setItem('firstname', firstname.value)
+
+        event.target.reset()
+        alert("Form submitted!");
     });
-}
+

@@ -1,2 +1,6 @@
 # Hitman: World of Assassination
-Projekt na [Wprowadzenie do Aplikacji Internetowych](https://github.com/Kus-Kus16/WDAI_2024)
+Strona o grze
+
+Projekt na [Wprowadzenie do Aplikacji Internetowych](https://github.com/Kus-Kus16/Wprowadzenie-do-Aplikacji-Internetowych)
+
+Maciej Kus
